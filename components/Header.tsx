@@ -1,0 +1,2 @@
+"use client";import Link from"next/link";import{useState}from"react";
+export default function Header(){const[open,setOpen]=useState(false);return <><header><Link href="/" className="logo">FORM / FIELD</Link><button className="menu" onClick={()=>setOpen(!open)}>{open?"CLOSE":"MENU"}</button><nav className={open?"open":""}><Link href="/projects">Projects</Link><Link href="/studio">Studio</Link><Link href="/approach">Approach</Link><Link href="/journal">Journal</Link><Link href="/contact">Contact</Link></nav></header></>}

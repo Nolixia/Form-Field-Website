@@ -1,0 +1,9 @@
+export type Project={slug:string;number:string;name:string;location:string;year:string;type:string;image:string;intro:string;area:string;status:string};
+export const projects:Project[]=[
+{slug:"heath-house",number:"01",name:"Heath House",location:"Warwickshire",year:"2026",type:"Residential",image:"/images/heath-house.webp",intro:"A home anchored into its landscape, balancing monumental concrete with the warmth of oak and changing light.",area:"640 m²",status:"Completed"},
+{slug:"courtyard-home",number:"02",name:"Courtyard Home",location:"Birmingham",year:"2025",type:"Residential",image:"/images/courtyard-home.webp",intro:"A quiet family home organised around a planted room open to the sky.",area:"310 m²",status:"Completed"},
+{slug:"the-foundry",number:"03",name:"The Foundry",location:"Birmingham",year:"2025",type:"Cultural",image:"/images/the-foundry.webp",intro:"A careful transformation of industrial heritage into generous civic space.",area:"4,800 m²",status:"Completed"},
+{slug:"stillwater-house",number:"04",name:"Stillwater House",location:"Lake District",year:"2024",type:"Residential",image:"/images/stillwater-house.webp",intro:"A compact retreat drawn around one framed view of water and mountain.",area:"128 m²",status:"Completed"},
+{slug:"makers-studio",number:"05",name:"Makers Studio",location:"Digbeth",year:"2026",type:"Workplace",image:"/images/studio.webp",intro:"A flexible workplace for collaboration, models, materials and ideas.",area:"1,200 m²",status:"In progress"},
+{slug:"earth-pavilion",number:"06",name:"Earth Pavilion",location:"Coventry",year:"2027",type:"Cultural",image:"/images/materials.webp",intro:"A low-carbon public building made from earth, timber and reclaimed brick.",area:"2,100 m²",status:"Planning"}];
+export const findProject=(slug:string)=>projects.find(p=>p.slug===slug);
