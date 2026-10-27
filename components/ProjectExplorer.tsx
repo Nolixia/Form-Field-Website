@@ -1,0 +1,3 @@
+"use client";
+import {useState} from "react";import type {Project} from "@/lib/projects";import ProjectGrid from "./ProjectGrid";
+export default function ProjectExplorer({items}:{items:Project[]}){const [category,setCategory]=useState("All projects");const shown=items.filter(p=>category==="All projects"||p.type===category);return <><div className="filters" role="group" aria-label="Filter architecture concepts">{["All projects","Residential","Cultural","Workplace"].map(name=><button type="button" key={name} aria-pressed={name===category} onClick={()=>setCategory(name)}>{name}</button>)}</div><p role="status">{shown.length} illustrative projects</p><ProjectGrid items={shown}/></>}
